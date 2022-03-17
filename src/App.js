@@ -4,7 +4,15 @@ export default function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
-      <button className="btn btn-primary">HI</button>
+      <footer>
+        This website is created by Diana Militaru and is{" "}
+        <a
+          href="https://github.com/dianettee/weather-application-in-react"
+          target="_blank"
+        >
+          open-source
+        </a>
+      </footer>
     </div>
   );
 }
