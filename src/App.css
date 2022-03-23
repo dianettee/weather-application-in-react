@@ -1,0 +1,17 @@
+.container {
+  padding-top: 50px;
+  font-family: "Merriweather", serif;
+  font-family: "Questrial", sans-serif;
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.App footer {
+  text-align: center;
+  font-size: 14px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Questrial&display=swap");

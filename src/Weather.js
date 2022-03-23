@@ -18,25 +18,28 @@ export default function Weather() {
             <input
               type="submit"
               value="Search"
-              className="btn btn-primary w-40"
+              className="btn btn-primary w-50"
             />
           </div>
         </div>
       </form>
 
       <h1>New York</h1>
-      <ul className="list">
-        <span>Last update:</span>
+      <ul className="weatherInformation">
+        <span className="lastUpdate">Last update:</span>
         <li>Friday 20:22</li>
         <li>clear sky</li>
       </ul>
       <div className="row">
         <div className="col-6">
           <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sunny" />
-          22°C
+          <span className="currentTemp">
+            {" "}
+            22 <span className="currentTempUnit">°C</span>
+          </span>
         </div>
         <div className="col-6">
-          <ul className="list">
+          <ul className="weatherConditions">
             <li>Humidity : 46%</li>
             <li>Wind: 5km/h</li>
           </ul>
