@@ -1,7 +1,16 @@
+import axios from "axios";
 import React from "react";
 import "./Weather.css";
 
 export default function Weather() {
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+  const apiKey = "b5bbf587e13af95f0c77ca011722861f";
+  let city = "London";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="Weather">
       <form>
@@ -11,7 +20,7 @@ export default function Weather() {
               type="search"
               placeholder="Type a city..."
               className="form-control"
-              autocomplete="off"
+              autoComplete="off"
             />
           </div>
           <div className="col-4">
