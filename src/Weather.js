@@ -15,14 +15,15 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "http://openweathermap.org/img/wn/01d@2x.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       date: new Date(response.data.dt * 1000),
     });
   }
 
   function search() {
-    const apiKey = "b5bbf587e13af95f0c77ca011722861f";
+    const apiKey = "afec290b2afca450b97152096f8e3b9e";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    // apiKey from 2nd account(diana.militaru@gmx.de)
     axios.get(apiUrl).then(handleResponse);
   }
 
