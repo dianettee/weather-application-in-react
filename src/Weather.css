@@ -29,11 +29,10 @@
   font-size: 10px;
 }
 
-.Weather img {
+.Weather canvas {
+  margin-top: 10px;
   margin-right: 10px;
-  width: 60px;
   float: left;
-  vertical-align: middle;
 }
 .Weather .currentTemp {
   font-size: 50px;
