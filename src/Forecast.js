@@ -1,80 +1,17 @@
 import React from "react";
 import "./Forecast.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Forecast() {
   return (
-    <div className="Forecast text-center mt-4">
+    <div className="Forecast">
       <div className="row">
-        <div className="col-2">
-          <div className="forecastDay">Mon</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="60px"
-          ></img>
-          <div className="forecastTemp">
-            <span className="forecastTempMin">6°</span>{" "}
-            <span className="forecastTempMax">15°</span>
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forecastDay">Mon</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="60px"
-          ></img>
-          <div className="forecastTemp">
-            <span className="forecastTempMin">6°</span> {""}
-            <span className="forecastTempMax">15°</span>
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forecastDay">Mon</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="60px"
-          ></img>
-          <div className="forecastTemp">
-            <span className="forecastTempMin">6°</span>{" "}
-            <span className="forecastTempMax">15°</span>
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forecastDay">Mon</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="60px"
-          ></img>
-          <div className="forecastTemp">
-            <span className="forecastTempMin">6°</span>{" "}
-            <span className="forecastTempMax">15°</span>
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forecastDay">Mon</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="60px"
-          ></img>
-          <div className="forecastTemp">
-            <span className="forecastTempMin">6°</span>{" "}
-            <span className="forecastTempMax">15°</span>
-          </div>
-        </div>
-        <div className="col-2">
-          <div className="forecastDay">Mon</div>
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            alt=""
-            width="60px"
-          ></img>
-          <div className="forecastTemp">
-            <span className="forecastTempMin">6°</span>{" "}
-            <span className="forecastTempMax">15°</span>
+        <div className="col">
+          <div className="ForecastDay">Mon</div>
+          <WeatherIcon code="01d" size={40} />
+          <div className="ForecastTemperatures">
+            <span className="ForecastTempMin">6°</span>{" "}
+            <span className="ForecastTempMax">15°</span>
           </div>
         </div>
       </div>
