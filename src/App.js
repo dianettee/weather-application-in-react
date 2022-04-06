@@ -1,6 +1,5 @@
 import "./App.css";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
 
 export default function App() {
   return (
@@ -8,7 +7,6 @@ export default function App() {
       <div className="container">
         <div className="appInfo">
           <Weather defaultCity="New York" />
-          <Forecast />
         </div>
         <footer>
           This website is created by Diana Militaru and is{" "}
