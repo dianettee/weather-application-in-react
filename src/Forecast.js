@@ -16,11 +16,18 @@ export default function Forecast(props) {
   if (loaded) {
     // loaded is here a variable
     return (
+      //after the "row" div we will insert a loop, looping through the forecast array one at a time
       <div className="Forecast">
         <div className="row">
-          <div className="col">
-            <ForecastDay data={forecast[0]} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col d-flex justify-content-center" key={index}>
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
