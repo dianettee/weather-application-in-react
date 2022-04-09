@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Forecast.css";
 import axios from "axios";
 import ForecastDay from "./ForecastDay";
@@ -12,6 +12,13 @@ export default function Forecast(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+  //useEffect - if the props.coord change, call the setLoaded function ( false)
+  // because the state of the setLoaded function has been changed,
+  // it is going to re-run the whole thing below
 
   if (loaded) {
     // loaded is here a variable
